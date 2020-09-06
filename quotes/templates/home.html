@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content%}
+
+{% if ticker %}
+    {{ticker}}
+{% endif %}
+    
+
+{% if api %} {% if api == 'Error...' %} There is a problem with the ticker symbol, please try again. {% else %}
+
+<h1>{{ api.Name }}</h1>
+Revenue: ${{ api.RevenueTTM }}<br />
+Dividend Per Share: {{api.DividendPerShare}}<br />
+Market Cap: {{api.MarketCapitalization}}<br />
+Payout Ratio: {{api.PayoutRatio}}<br />
+52Wk High: {{api.52WeekHigh}}<br />
+52Wk Low: {{api.52WeekLow}}<br />
+
+{% endif %} {% endif %} {% endblock %}

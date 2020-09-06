@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Delete Stock</h1>
+
+
+{% if ticker %}
+    
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in ticker %}
+            <tr>
+                <th scope="row">{{item}}</th>
+                <td> <a class="btn btn-secondary" href="{% url 'delete' item.id  %}">Delete Stock</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+   
+{% else %}
+    You don't have any stocks
+{% endif %}
+    
+{% endblock %}
