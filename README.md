@@ -21,7 +21,7 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 * Get free API KEY from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
-* Create '''.env''' file and add ```API_KEY=<your api key>```
+* Create ```.env``` file at project root and add ```API_KEY=<your api key>``` in the file.
 
 ## Running the project
 ```
